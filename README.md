@@ -1,5 +1,10 @@
 I want to demo how to prepare a deb for hello world.
 
+1. [source code](#step-1-source-code)
+2. [tar it for debmake](#step-2-tar-it-for-debmake)
+3. [debianizes the upstream source tree by adding template files](#step-3-debianizes-the-upstream-source-tree-by-adding-template-files)
+4. [manual customization](#step-4-manual-customization)
+
 # Step 1: source code
 
 Tree:
