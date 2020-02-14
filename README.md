@@ -1,5 +1,7 @@
 I want to demo how to prepare a deb for hello world.
 
+Before below steps, [setup tool](https://www.debian.org/doc/manuals/debmake-doc/ch03.en.html) first
+
 1. [source code](#step-1-source-code)
 2. [tar it for debmake](#step-2-tar-it-for-debmake)
 3. [debianizes the upstream source tree by adding template files](#step-3-debianizes-the-upstream-source-tree-by-adding-template-files)
