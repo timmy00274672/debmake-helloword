@@ -4,6 +4,7 @@ I want to demo how to prepare a deb for hello world.
 2. [tar it for debmake](#step-2-tar-it-for-debmake)
 3. [debianizes the upstream source tree by adding template files](#step-3-debianizes-the-upstream-source-tree-by-adding-template-files)
 4. [manual customization](#step-4-manual-customization)
+5. [debuild](#step-5-debuild)
 
 # Step 1: source code
 
@@ -27,8 +28,7 @@ tree
 │   └── src
 │       └── hello.c
 ├── debhello-0.0.tar.gz   <=================== This one
-├── README.md
-└── result.html
+└── README.md
 ```
 
 # Step 3: debianizes the upstream source tree by adding template files
@@ -109,8 +109,7 @@ Tree
 │       └── hello.c
 ├── debhello_0.0.orig.tar.gz    <================ Backup for you
 ├── debhello-0.0.tar.gz
-├── README.md
-└── result.html
+└── README.md
 ```
 
 # Step 4: manual customization
@@ -213,6 +212,59 @@ index dca10d1..87a6727 100755
  
  #override_dh_install:
  #  dh_install --list-missing -X.pyc -X.pyo
+```
+
+# Step 5: debuild
+
+Run `debuild`, refer to result: [debuild.log](/debuild.log)
+
+Tree:
+
+```
+├── debhello-0.0
+│   ├── debian
+│   │   ├── changelog
+│   │   ├── compat
+│   │   ├── control
+│   │   ├── copyright
+│   │   ├── debhello                                    <================ New
+│   │   │   ├── DEBIAN
+│   │   │   │   ├── control
+│   │   │   │   └── md5sums
+│   │   │   └── usr
+│   │   │       ├── bin
+│   │   │       │   └── hello
+│   │   │       └── share
+│   │   │           └── doc
+│   │   │               └── debhello
+│   │   │                   ├── changelog.Debian.gz
+│   │   │                   ├── copyright
+│   │   │                   └── README.Debian
+│   │   ├── debhello.debhelper.log                      <================ New
+│   │   ├── debhello.substvars                          <================ New
+│   │   ├── debhelper-build-stamp                       <================ New
+│   │   ├── files
+│   │   ├── patches
+│   │   │   └── series
+│   │   ├── README.Debian
+│   │   ├── rules
+│   │   ├── source
+│   │   │   ├── format
+│   │   │   └── local-options
+│   │   └── watch
+│   ├── Makefile
+│   └── src
+│       ├── hello                                       <================ New
+│       └── hello.c
+├── debhello_0.0-1_amd64.build                          <================ New
+├── debhello_0.0-1_amd64.changes                        <================ New
+├── debhello_0.0-1_amd64.deb                            <================ New
+├── debhello_0.0-1.debian.tar.xz                        <================ New
+├── debhello_0.0-1.dsc                                  
+├── debhello_0.0.orig.tar.gz
+├── debhello-0.0.tar.gz
+├── debuild.log                                         <================ output of debuild.log
+└── README.md
 ```
 
 ------

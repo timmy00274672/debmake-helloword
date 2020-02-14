@@ -1,0 +1,32 @@
+Format: 1.8
+Date: Fri, 14 Feb 2020 11:40:40 +0800
+Source: debhello
+Binary: debhello
+Architecture: source amd64
+Version: 0.0-1
+Distribution: UNRELEASED
+Urgency: low
+Maintainer: Tim Chen <timchen@ingrasys.com>
+Changed-By: Tim Chen <timchen@ingrasys.com>
+Description:
+ debhello   - This is my demo
+Changes:
+ debhello (0.0-1) UNRELEASED; urgency=low
+ .
+   * Initial release. Closes: #nnnn
+     <nnnn is the bug number of your ITP>
+Checksums-Sha1:
+ c62fb17d869e3f129882d88176cbc31261426c8b 798 debhello_0.0-1.dsc
+ ddbbc3b1f5d5faaa84a7febd2d35cf6cdf502650 490 debhello_0.0.orig.tar.gz
+ 95bf9d619f09f2d1d31dc532a851c096a47ab91a 1824 debhello_0.0-1.debian.tar.xz
+ d133249eda6ebf71d9fbfc103236d3caf7e63871 3484 debhello_0.0-1_amd64.deb
+Checksums-Sha256:
+ 90227f1666af1a65e861142ccbbf19e402ca63eaa215cb40f3036f89e57fe21f 798 debhello_0.0-1.dsc
+ 12e844531ec6a33b069374492328024c1e8fadd8022bca24bbe69fea40d27d4c 490 debhello_0.0.orig.tar.gz
+ b3bd776b69749ff4df688b4adcb291bb20713554e45217780fdf48af2e65d657 1824 debhello_0.0-1.debian.tar.xz
+ 7a86f43a86a11ab22545070dc641530ca8c88e9f69c7fcd7f25e7c997838781e 3484 debhello_0.0-1_amd64.deb
+Files:
+ 1ed66fb339009a4d4a0bad632b9867d8 798 devel extra debhello_0.0-1.dsc
+ 68b1b2a2766066ee0c7f4422d3c64a9e 490 devel extra debhello_0.0.orig.tar.gz
+ 75efd1a820ea374103da6ca38f64f78a 1824 devel extra debhello_0.0-1.debian.tar.xz
+ 7b4a05a31c6be16ac872611b0aec2d85 3484 devel extra debhello_0.0-1_amd64.deb

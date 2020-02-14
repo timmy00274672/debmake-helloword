@@ -1,0 +1,11 @@
+Package: debhello
+Version: 0.0-1
+Architecture: amd64
+Maintainer: Tim Chen <timchen@ingrasys.com>
+Installed-Size: 18
+Depends: libc6 (>= 2.2.5)
+Section: devel
+Priority: extra
+Multi-Arch: foreign
+Homepage: https://timmy00274672.wordpress.com/
+Description: This is my demo
